@@ -144,7 +144,7 @@ function mainLoop() {
       aircraft.hp--;
       if (aircraft.hp <= 0) {
         aircraft.exploded = true;
-        causeOfDeath = "You came out of the safety zone";
+        causeOfDeath = "U Ded";
       }
     }
     
@@ -166,7 +166,7 @@ function mainLoop() {
 
     if (isNaN(aircraft.y)) {
       aircraft.exploded = true;
-      causeOfDeath = "An bug happend";
+      causeOfDeath = "U Ded";
       sendDeathData();
     }
   
