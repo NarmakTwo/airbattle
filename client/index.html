@@ -64,6 +64,8 @@
   <script src="comm.js"></script>
   <script>document.getElementById("startBtn2").style.display = "block"</script>
   Pitch: W,S<br> Roll: A,D<br> Yaw: Q,E<br> Speed up/down: I,K<br> Shoot: J
+  <script>document.addEventListener('keydown', function(event) {const currentKey = event.key;const currentKeyElement = document.getElementById('currentKey');currentKeyElement.innerHTML = `${currentKey}`;});</script>
+  <h1 id='currentKey' style="display:block;position:absolute;top:60%;left:calc(50% + 530px);transform:translate(-50%,-50%);">NaN</h1>
 </body>
 
 </html>
