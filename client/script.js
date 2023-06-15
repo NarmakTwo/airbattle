@@ -386,5 +386,5 @@ function gameOverLoop() {
     requestAnimationFrame(gameOverLoop);
   }
 }
-
+document.addEventListener('keydown', (event) => {if (event.key == 'c') {msg.setMsg("Hoo Hoo I Am Chez");}}, false);
 drawLobby();
