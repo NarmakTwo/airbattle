@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Airbattle</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.png">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
 <body>
   <div id="debug"></div>
   <div id="cover">
@@ -5,7 +16,7 @@
     <select id="name1">
       <option>select option</option>
       <option value="super">super</option>
-      <option value="strong">strong</option>
+      <option value="super">strong</option>
       <option value="small">small</option>
       <option value="big">big</option>
       <option value="fast">fast</option>
@@ -13,7 +24,7 @@
       <option value="red">red</option>
       <option value="blue">blue</option>
       <option value="green">green</option>
-      <option value="black">black</option>
+      <option value="green">black</option>
       <option value="wise">wise</option>
       <option value="icy">icy</option>
       <option value="silent">silent</option>
@@ -37,7 +48,23 @@
       <option value="liar">liar</option>
       <option value="magician">magician</option>
       <option value="satisfaction">satisfaction</option>
-    <input type="text" id="nameBox">Username:</input>
     </select>
-    <button onclick='window.location.replace("./singleplayer/");' id="startBtn2">singleplayer</button>
     <button id="startBtn" onclick='document.getElementById("startBtn2").style.display = "none";'>multiplayer</button>
+    <button onclick='window.location.replace("./singleplayer/");' id="startBtn2">singleplayer</button>
+    <canvas id="main" width="800px" height="600px"></canvas>
+  </div>
+  <script src="prepare.js"></script>
+  <script src="adjCanvasSize.js"></script>
+  <script src="key.js"></script>
+  <script src="model.js"></script>
+  <script src="physicalBehavior.js"></script>
+  <script src="draw.js"></script>
+  <script src="quat.js"></script>
+  <script src="script.js"></script>
+  <script src="comm.js"></script>
+  Pitch: W,S<br> Roll: A,D<br> Yaw: Q,E<br> Speed up/down: I,K<br> Shoot: J
+  <script>document.addEventListener('keydown', function(event) {const currentKey = event.key;const currentKeyElement = document.getElementById('currentKey');currentKeyElement.innerHTML = `${currentKey}`;});</script>
+  <h1 id='currentKey' style="display:block;position:absolute;top:60%;left:calc(50% + 530px);transform:translate(-50%,-50%);">NaN</h1>
+</body>
+
+</html>
