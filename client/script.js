@@ -67,11 +67,7 @@ function reset() {
 }
 
 function start() {
-  if (nameBox1.value === "") {
-    player.name = nameBox2.value;
-  }else{
-    player.name = nameBox1.value + " " + nameBox2.value;
-  }
+  player.name = document.getElementById("nameBox").value
   document.getElementById("startBtn").style.display = "none";
   document.getElementById("name1").style.display = "none";
   document.getElementById("name2").style.display = "none";
