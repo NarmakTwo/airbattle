@@ -210,25 +210,43 @@ function mainLoop() {
           }
         }
         if (!esc) {
+/*          for (let j = 0; j < otherAircrafts.length; j++) {
+*            relX = bullets[i].x-otherAircrafts[j].x;
+*            relY = bullets[i].y-otherAircrafts[j].y;
+*            relZ = bullets[i].z-otherAircrafts[j].z;
+*            if (Math.sqrt(relX**2+relY**2+relZ**2) < 300) {
+*              for (let k = 0; k < 5; k++) {
+*                blasts.push(new Blast(otherAircrafts[j].x,otherAircrafts[j].y,otherAircrafts[j].z,100,10));
+*                objects.push(blasts[blasts.length-1]);
+*              }
+*              bullets[i].dead = true;
+*              bullets.splice(i,1);
+*              i--;
+*              hit.push(otherAircrafts[j].id);
+*              aircraft.score += 10;
+*              msg.setMsg("You hit "+otherAircrafts[j].name);
+*              break;
+*            }
+*          }
+*        }*/
           for (let j = 0; j < otherAircrafts.length; j++) {
-            relX = bullets[i].x-otherAircrafts[j].x;
-            relY = bullets[i].y-otherAircrafts[j].y;
-            relZ = bullets[i].z-otherAircrafts[j].z;
-            if (Math.sqrt(relX**2+relY**2+relZ**2) < 300) {
-              for (let k = 0; k < 5; k++) {
-                blasts.push(new Blast(otherAircrafts[j].x,otherAircrafts[j].y,otherAircrafts[j].z,100,10));
-                objects.push(blasts[blasts.length-1]);
-              }
-              bullets[i].dead = true;
-              bullets.splice(i,1);
-              i--;
-              hit.push(otherAircrafts[j].id);
-              aircraft.score += 10;
-              msg.setMsg("You hit "+otherAircrafts[j].name);
-              break;
+            relX = bullets[i].x - otherAircrafts[j].x;
+            relY = bullets[i].y - otherAircrafts[j].y;
+            relZ = bullets[i].z - otherAircrafts[j].z;
+            if (Math.sqrt(relX * relX + relY * relY + relZ * relZ) < 10 && Math.abs(bullets[i].y - otherAircrafts[j].y) < 5) {
+                for (let k = 0; k < 5; k++) {
+                    blasts.push(new Blast(otherAircrafts[j].x, otherAircrafts[j].y, otherAircrafts[j].z, 100, 10));
+                    objects.push(blast[blast.length - 1]);
+                }
+                bullets[i].dead = true;
+                bullets.splice(i, 1);
+                i--;
+                hit.push(otherAircrafts[j].id);
+                aircraft.score += 10;
+                message.setMsg("You hit " + otherAircrafts[j].name);
+                break;
             }
-          }
-        }
+         }
       }
     }
   
