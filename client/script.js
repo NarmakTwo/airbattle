@@ -118,6 +118,11 @@ function mainLoop() {
     if (aircraft.throttle > 0) {
       aircraft.throttle -= 0.01;
     }
+    else {
+      if (key.r) {
+        aircraft.throttle -= 0.01
+      }
+    }
   }
   
   
