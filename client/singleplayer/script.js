@@ -207,7 +207,8 @@ function mainLoop() {
   }
 
 }
-
+document.addEventListener('keydown', (event) => {if (event.key == 'c') {msg.setMsg("Hoo Hoo I Am Chez");}}, false);
+document.addEventListener('keydown', (event) => {if (event.key == 'f') {msg.setMsg(prompt('Message to send:'));}}, false);
 mainLoop();
 
 
