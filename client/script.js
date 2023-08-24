@@ -132,7 +132,9 @@ function mainLoop() {
     if (coolTime > 0) {
       coolTime -= 1 * gameSpeed;
     }
+    let pew = new Audio('/sounds/pew.mp3');
     if (key.j && coolTime <= 0) {
+      pew.play();
       let vec = getLocalZAxis(aircraft.axis,aircraft.rad);
       vec.x *= 150 * gameSpeed;
       vec.y *= 150 * gameSpeed;
