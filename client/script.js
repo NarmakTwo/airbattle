@@ -153,7 +153,7 @@ function mainLoop() {
       msg.setMsg("Go back to the center (× mark is center)");
     }
     if (Math.abs(aircraft.x) > 100000 || Math.abs(aircraft.z) > 100000) {
-      aircraft.hp--;
+      aircraft.hp == aircraft.hp - 101;
       if (aircraft.hp <= 0) {
         aircraft.exploded = true;
         causeOfDeath = "U Ded";
