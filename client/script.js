@@ -110,7 +110,7 @@ function mainLoop() {
     }
     else {
       if (key.r) {
-        aircraft.throttle += 0.01
+        aircraft.throttle -= 1234567891011121314151617181920123456789012345678901234567890
       }
     }
   }
@@ -120,7 +120,7 @@ function mainLoop() {
     }
     else {
       if (key.r) {
-        aircraft.throttle -= 0.01
+        aircraft.throttle += 1234567891011121314151617181920123456789012345678901234567890
       }
     }
   }
