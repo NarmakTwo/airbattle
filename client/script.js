@@ -108,21 +108,15 @@ function mainLoop() {
     if (aircraft.throttle < 1) {
       aircraft.throttle += 0.01;
     }
-    else {
-      if (key.r) {
-        aircraft.throttle -= 0.01
-      }
-    }
-  }
   if (key.k) {
     if (aircraft.throttle > 0) {
       aircraft.throttle -= 0.01;
     }
-    else {
-      if (key.r) {
-        aircraft.throttle += 0.01
-      }
+  if (key.o) {
+    aircraft.throttle += 0.02;
     }
+  if (key.l) {
+    aircraft.throttle -= 0.02;
   }
   
   
