@@ -17,7 +17,9 @@ var key = {
   "i":false,
   "k":false,
   "j":false,
-  "r":false
+  "r":false,
+  "o":false,
+  "l":false
 };
 var afnc = {
 	"ArrowUp":"up",
@@ -37,7 +39,9 @@ var afnc = {
   "i":"i",
   "k":"k",
   "j":"j",
-  "r":"r"
+  "r":"r",
+  "o":"o",
+  "l":"l"
 }
 
 //キー入力の判定プログラム in 折りたたみ用if文
